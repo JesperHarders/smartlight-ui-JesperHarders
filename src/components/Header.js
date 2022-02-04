@@ -6,7 +6,7 @@ import ProfilePicture from "./ProfilePicture"
 const HeaderComponent = () => {
     return (
         <header className="bg-[#0A4DA2] h-48 relative">
-            <div className="flex justify-around">
+            <div className="flex justify-around p-[15%]">
                 <h1 className="text-white text-3xl font-medium">Control <br/> Panel</h1>
                 <ProfilePicture/>
             </div>
