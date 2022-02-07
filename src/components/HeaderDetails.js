@@ -28,7 +28,7 @@ const HeaderDetails = () => {
             </div>
             <LampComponent/>
             <Bubble/>
-            <BubbleTwo/>
+            {/* <BubbleTwo/> */}
             <BubbleThree/>
         </header>
     );

@@ -1,10 +1,13 @@
 import Card from "./Card";
-import BedComponent from "./icons/Bed";
+import Heading from "./Heading";
 
 const ContentArea = () => {
     return (
         <section>
-            <Card image={<BedComponent/>} titel='Bed room' light='4 lights'/>
+            <div>
+                <Heading text='All Rooms'/>
+                <Card/>
+            </div>
         </section>
     );
 }
