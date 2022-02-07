@@ -1,5 +1,6 @@
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import ContentArea from './components/ContentArea';
+import ContentAreaDetails from './components/ContentAreaDetails';
 import HeaderComponent from './components/Header';
 import HeaderDetails from "./components/HeaderDetails";
 
@@ -14,6 +15,7 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/' element={<ContentArea/>}/>
+          <Route path='/rooms/:id' element={<ContentAreaDetails/>}/>
         </Routes>
       </div>
     </BrowserRouter>
