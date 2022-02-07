@@ -46,8 +46,8 @@ const Card = (props) => {
     return (
     <div className="grid grid-cols-2 gap-5">
         {cards.map((card) => (
-                <Link to={`/rooms/${card.id}`} className="w-[100%]">
-                <div className="rounded-xl p-3 shadow-xl" key={card.id}>
+                <Link to={`/rooms/${card.id}`} className="w-[100%]" key={card.id}>
+                <div className="rounded-xl p-3 shadow-xl">
                     <div className="mb-4">
                         {card.image}
                     </div>
