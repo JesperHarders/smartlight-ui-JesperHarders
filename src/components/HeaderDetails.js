@@ -9,6 +9,7 @@ import SimpleBed from "./icons/SimpleBed";
 import LightButtondark from "./LightButtonDark";
 import DeskComponent from "./icons/Desk";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HeaderDetails = () => {
     return (
@@ -16,19 +17,19 @@ const HeaderDetails = () => {
             <div className="pt-[15%] pl-6 flex justify-between relative">
                 <Link to='/'>
                     <h1 className="text-white text-3xl font-medium flex"><BiArrowBack/> Bed<br/>Room</h1>
-                    <p className="text-[#FFD239] text-[19px]">4 Lights</p>
+                    <motion.p initial={{y: -50, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1}} className="text-[#FFD239] text-[19px]">4 Lights</motion.p>
                 </Link>
                 <div></div>
             </div>
-            <div className="flex overflow-auto whitespace-nowrap mt-[10%]">
+            <motion.div initial={{x: 500}} animate={{x: 0}} transition={{duration: 1}} className="flex overflow-auto whitespace-nowrap mt-[10%]">
                 <LightButtonWhite icon={<LightbulbIcon/>} text='Main Light'/>
                 <LightButtondark icon={<DeskComponent/>} text='Desk light'/>
                 <LightButtonWhite icon={<SimpleBed/>} text='Bed Light'/>
                 <LightButtondark icon={<DeskComponent/>} text='Extra light'/>
-            </div>
+            </motion.div>
             <LampComponent/>
             <Bubble/>
-            {/* <BubbleTwo/> */}
+            <BubbleTwo/>
             <BubbleThree/>
         </header>
     );

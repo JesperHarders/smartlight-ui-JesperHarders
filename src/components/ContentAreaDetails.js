@@ -12,6 +12,7 @@ import BirthdayScene from "./scenes/BirthdayScene";
 import PartyScene from "./scenes/PartyScene";
 import RelaxScene from "./scenes/RelaxScene";
 import FunScene from "./scenes/FunScene";
+import { motion } from "framer-motion";
 
 const ContentAreaDetails = ({handleColor}) => {
     return (
@@ -25,7 +26,7 @@ const ContentAreaDetails = ({handleColor}) => {
                 <LightbulbThree/>
             </div>
             <Heading text='Colors'/>
-            <div onClick={handleColor} className="flex justify-around py-[20px]">
+            <motion.div animate={{width: 350}} transition={{duration: 1}} onClick={handleColor} className="flex justify-around py-[20px] w-[130px]">
                 <ChangeColorbutton/>
                 <GreenButton/>
                 <BlueButton/>
@@ -33,14 +34,14 @@ const ContentAreaDetails = ({handleColor}) => {
                 <PinkButton/>
                 <OrangeButton/>
                 <NewColorButton/>
-            </div>
+            </motion.div>
             <Heading text='Scenes'/>
-            <div className="grid grid-cols-2 gap-5 pt-[20px]">
+            <motion.div animate={{width: 350}} transition={{duration: 1}} className="grid grid-cols-2 gap-5 pt-[20px] w-[90px]">
                 <BirthdayScene/>
                 <PartyScene/>
                 <RelaxScene/>
                 <FunScene/>
-            </div>
+            </motion.div>
         </section>
     );
 }
