@@ -13,14 +13,7 @@ import PartyScene from "./scenes/PartyScene";
 import RelaxScene from "./scenes/RelaxScene";
 import FunScene from "./scenes/FunScene";
 
-const ContentAreaDetails = () => {
-
-    const changeColor = (e) => {
-        let fullString = e.target.classList[0]
-        let hexcode = fullString.slice(4, 11)
-        console.log(hexcode);
-        localStorage.setItem('color', hexcode)
-    }
+const ContentAreaDetails = ({handleColor}) => {
     return (
         <section className="pt-[20px] px-[15px]">
             <Heading text='Intensity'/>
@@ -32,7 +25,7 @@ const ContentAreaDetails = () => {
                 <LightbulbThree/>
             </div>
             <Heading text='Colors'/>
-            <div onClick={changeColor} className="flex justify-around py-[20px]">
+            <div onClick={handleColor} className="flex justify-around py-[20px]">
                 <ChangeColorbutton/>
                 <GreenButton/>
                 <BlueButton/>
