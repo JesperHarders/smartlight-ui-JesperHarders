@@ -1,5 +1,5 @@
-import Card from "./Card";
 import Heading from "./Heading";
+import Card from "./Card";
 
 const ContentArea = () => {
     return (
